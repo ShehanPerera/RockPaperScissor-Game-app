@@ -10,6 +10,7 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class Game extends AppCompatActivity {
+/*initiating image viewers,buttons ,output image by cpu and palyer ,result*/
 
     Button b_rock,b_scissor,b_paper;
     ImageView iv_cpu,iv_me;
@@ -20,7 +21,7 @@ public class Game extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-
+/*defining the buttons , image viewers of app and images*/
         iv_cpu= (ImageView) findViewById(R.id.iv_cpu);
         iv_me= (ImageView) findViewById(R.id.iv_me);
 
@@ -62,7 +63,7 @@ public class Game extends AppCompatActivity {
             }
         });
     }
-
+/* CPU automation image showing buy random*/
     public void calculate()
     {
     int cpu=r.nextInt(3);
@@ -82,7 +83,7 @@ public class Game extends AppCompatActivity {
             cpuchocie="scissor";
             iv_cpu.setImageResource(R.drawable.scissor);
         }
-
+/*Way to find out the winner, losser ,and draw as the game */
         if(mychoice.equals("rock") && cpuchocie.equals("paper"))
         {
             result="You lose!!!!";
@@ -107,7 +108,7 @@ public class Game extends AppCompatActivity {
         {
             result="You win!!!!";
         }
-        else if(mychoice.equals("paper") && cpuchocie.equals("papaer"))
+        else if(mychoice.equals("paper") && cpuchocie.equals("paper"))
         {
             result="draw";
         }
